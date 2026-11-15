@@ -1,6 +1,6 @@
 # ce-net demos
 
-Ten demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
+Eleven demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
 killed server without losing a write, hand a stranger a key that does exactly one thing, and more. Each one is its own
 repo, Apache-2.0, built from reusable ce-net cells, with its recorded proof in the repo.
 
@@ -18,6 +18,9 @@ outside yet.
   Every saved write survives, and the page proves it with a hash chain.
 - [An engineering result you can re-check](https://github.com/ce-net/demo-verified-result): A physics result that comes
   with a certificate. Re-check it in your own browser: same code, same inputs, same answer.
+- [Print only through the guard](https://github.com/ce-net/demo-printer-guard): Send a print job straight to the printer and it is
+  refused. Send it through the guard, which checks bounds, temperatures, material and time: the 300 C job is rejected,
+  the safe one prints, and a replay of the forwarded call is refused.
 
 ## Partly
 

@@ -94,6 +94,15 @@
       "page": "https://ce-net.com/demos/wrap/",
       "status": "partly",
       "note": "Tests pass and a local run reproduces the recorded output hash. Parity across machines is not re-checked, and one dependency is not public yet."
+    },
+    {
+      "slug": "printer-guard",
+      "name": "Print only through the guard",
+      "line": "Send a print job straight to the printer and it is refused. Send it through the guard, which checks bounds, temperatures, material and time: the 300 C job is rejected, the safe one prints, and a replay is refused.",
+      "repo": "https://github.com/ce-net/demo-printer-guard",
+      "page": "https://github.com/ce-net/demo-printer-guard",
+      "status": "works",
+      "note": "Fresh clone: 4 attempts, 3 refused with the rule that decided, 40 of 40 layers streamed; report matches byte for byte."
     }
   ]
 }
