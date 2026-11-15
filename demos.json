@@ -1,225 +1,234 @@
 {
-  "updated": "2026-11-15",
-  "status_meaning": {
-    "works": "Re-checked from a fresh clone: it builds, runs and reproduces the numbers in its README.",
-    "partly": "The code and recorded proof are public; the note says which part is not reproducible from outside yet."
+ "updated": "2026-11-15",
+ "status_meaning": {
+  "works": "Re-checked from a fresh clone: it builds, runs and reproduces the numbers in its README.",
+  "partly": "The code and recorded proof are public; the note says which part is not reproducible from outside yet."
+ },
+ "demos": [
+  {
+   "slug": "live-refs",
+   "name": "References: anything to anything",
+   "line": "One kind of name reaches a file on a laptop, a blob, a repo file at a commit, a node, a person, a cell op, a capability and an enterprise system. It follows moves and refuses changed bytes.",
+   "repo": "https://github.com/ce-net/live-refs",
+   "page": "https://ce-net.github.io/live-refs/",
+   "status": "works",
+   "note": "A fresh clone runs four devices and eight steps: 9 of 9 kinds resolved, 2 of 2 tampered files refused, 3 of 3 offline resolves, 60 of 60 ids byte-identical. A live system."
   },
-  "demos": [
-    {
-      "slug": "live-refs",
-      "name": "References: anything to anything",
-      "line": "One kind of name reaches a file on a laptop, a blob, a repo file at a commit, a node, a person, a cell op, a capability and an enterprise system. It follows moves and refuses changed bytes.",
-      "repo": "https://github.com/ce-net/live-refs",
-      "page": "https://ce-net.github.io/live-refs/",
-      "status": "works",
-      "note": "A fresh clone runs four devices and eight steps: 9 of 9 kinds resolved, 2 of 2 tampered files refused, 3 of 3 offline resolves, 60 of 60 ids byte-identical. A live system."
-    },
-    {
-      "slug": "render-compute",
-      "name": "Render across devices",
-      "line": "One image, rendered by several machines at once. The result is pixel-identical to a single-machine render.",
-      "repo": "https://github.com/ce-net/demo-render-compute",
-      "page": "https://ce-net.com/demos/render-compute/",
-      "status": "works",
-      "note": "A fresh clone renders the reference and the tiled frame (one tile killed and retried) to the same hash."
-    },
-    {
-      "slug": "self-healing",
-      "name": "Kill a node, keep the data",
-      "line": "Kill the server holding the data, live. Every saved write survives, and the page proves it with a hash chain.",
-      "repo": "https://github.com/ce-net/demo-self-healing",
-      "page": "https://ce-net.com/demos/self-healing/",
-      "status": "works",
-      "note": "A fresh clone passes the local failover test: 3 leader kills, 351 acknowledged writes, every proof holds."
-    },
-    {
-      "slug": "verified-result",
-      "name": "An engineering result you can re-check",
-      "line": "A physics result that comes with a certificate. Re-check it in your own browser: same code, same inputs, same answer.",
-      "repo": "https://github.com/ce-net/demo-verified-result",
-      "page": "https://ce-net.com/demos/verified/",
-      "status": "works",
-      "note": "A fresh clone verifies all 5 certificates and rejects 440 of 440 tampered edits."
-    },
-    {
-      "slug": "inference",
-      "name": "One prompt, many devices",
-      "line": "Ask a question and see which device answers. When one device drops out, the answer keeps streaming from another.",
-      "repo": "https://github.com/ce-net/demo-inference",
-      "page": "https://ce-net.com/demos/inference/",
-      "status": "partly",
-      "note": "The recorded run is in the repo (98 tokens, 98 of 98 signatures valid, switch at token 12). The live two-device page is not public yet."
-    },
-    {
-      "slug": "follow-me",
-      "name": "Follow-me cell",
-      "line": "A service that moves to whichever machine is closest to you, and keeps answering by the same name while it moves.",
-      "repo": "https://github.com/ce-net/demo-follow-me",
-      "page": "https://ce-net.com/follow-me/",
-      "status": "partly",
-      "note": "The restart on one device is recorded. A recorded move between two devices is not in the repo yet."
-    },
-    {
-      "slug": "playground",
-      "name": "Playground: deploy a cell in your browser",
-      "line": "Write a cell in your browser, deploy it to a real network, and call it from three languages, all within a minute.",
-      "repo": "https://github.com/ce-net/demo-playground",
-      "page": null,
-      "status": "partly",
-      "note": "Code and tests for the sandbox, fuel limit and refusals are public. The hosted playground is not live yet."
-    },
-    {
-      "slug": "one-pinned-action",
-      "name": "A stranger gets exactly one action",
-      "line": "We give you a key that does exactly one thing. Try to make it do more. Every attempt is refused, and the page shows you the rule that refused it.",
-      "repo": "https://github.com/ce-net/demo-one-pinned-action",
-      "page": "https://ce-net.com/demos/one-action/",
-      "status": "partly",
-      "note": "The build needs a protocol crate that is not published yet, so the tests cannot run from outside."
-    },
-    {
-      "slug": "live-typed-data",
-      "name": "Same data, browser and terminal, live",
-      "line": "Change a value in your browser and see it change in a terminal and on a 3D factory map at the same moment. One schema, no server code.",
-      "repo": "https://github.com/ce-net/demo-live-typed-data",
-      "page": "https://ce-net.com/demos/live-data/",
-      "status": "partly",
-      "note": "Recorded logs show 23 and 18 ms end to end and the same type error in both SDKs. Not yet re-run from a fresh clone."
-    },
-    {
-      "slug": "mesh-search",
-      "name": "Search everything you are allowed to see",
-      "line": "One search box across many machines. You only get back what your key allows, and the rest never leaves the machine it lives on.",
-      "repo": "https://github.com/ce-net/demo-mesh-search",
-      "page": "https://ce-net.com/demos/search/",
-      "status": "partly",
-      "note": "The recorded report is in the repo (guest key 11 to 6 hits, engineer key 11 to 11). The build needs crates that are not published yet."
-    },
-    {
-      "slug": "wrap-anything",
-      "name": "Any program becomes a mesh service in one command",
-      "line": "Turn any open-source program into a network service with one command. Then use it from your browser: same output, byte for byte.",
-      "repo": "https://github.com/ce-net/demo-wrap-anything",
-      "page": "https://ce-net.com/demos/wrap/",
-      "status": "partly",
-      "note": "Tests pass and a local run reproduces the recorded output hash. Parity across machines is not re-checked, and one dependency is not public yet."
-    },
-    {
-      "slug": "printer-guard",
-      "name": "Print only through the guard",
-      "line": "Send a print job straight to the printer and it is refused. Send it through the guard, which checks bounds, temperatures, material and time: the 300 C job is rejected, the safe one prints, and a replay is refused.",
-      "repo": "https://github.com/ce-net/demo-printer-guard",
-      "page": "https://github.com/ce-net/demo-printer-guard",
-      "status": "works",
-      "note": "Fresh clone: 4 attempts, 3 refused with the rule that decided, 40 of 40 layers streamed; report matches byte for byte."
-    },
-    {
-      "slug": "signed-receipts",
-      "name": "Every call leaves a receipt",
-      "line": "Run 200 calls across four cells, download the receipts, and check them on any machine with no network. Edit one and the verifier names it; drop one and the chain shows the gap.",
-      "repo": "https://github.com/ce-net/demo-signed-receipts",
-      "page": "https://github.com/ce-net/demo-signed-receipts",
-      "status": "works",
-      "note": "A fresh clone reproduces the 200 receipts byte for byte: 200 of 200 valid, and the tampered and gapped files fail. CI checks it offline."
-    },
-    {
-      "slug": "own-devices-only",
-      "name": "Shared with my devices, nobody else's",
-      "line": "Enroll your laptop, phone and desktop with a pairing code; each gets a key bound to that device. A copied key file is refused, and a lost phone is revoked from the laptop while the other two keep working.",
-      "repo": "https://github.com/ce-net/demo-own-devices-only",
-      "page": "https://github.com/ce-net/demo-own-devices-only",
-      "status": "works",
-      "note": "Fresh clone: 3 devices accepted, the copied key refused by the holder proof, the revoked phone refused 81 ms after the revoke; 11 of 11 golden vectors pass ce-net-capability-verify."
-    },
-    {
-      "slug": "sharded-search",
-      "name": "Sharded search: one leader per shard, rebalanced live",
-      "line": "4.6 million Wikipedia abstracts in 32 shards with 3 replicas each, one leader per shard. Kill a machine under a query loop that never stops: new leaders within one lease, replicas back to three, recall unchanged.",
-      "repo": "https://github.com/ce-net/demo-sharded-search",
-      "page": "https://ce-net.github.io/demo-sharded-search/",
-      "status": "partly",
-      "section": "advanced",
-      "note": "Recorded run: 96 instances, 7 leaders lost with machine-c, new leaders within 3.65 s, all shards back to 3 replicas in 6.57 s, 0 failed queries, recall@10 0.9202 before and after. All machines are processes on one server; the ce-net crates it was designed around are replaced by public stand-ins."
-    },
-    {
-      "slug": "line-twin",
-      "name": "A factory line you can audit",
-      "line": "A three-station line runs as a twin and drill becomes the bottleneck. Download the signed event log: your browser checks every signature and recomputes the numbers. Edit one timestamp and it names the event that broke.",
-      "repo": "https://github.com/ce-net/demo-line-twin",
-      "page": "https://ce-net.github.io/demo-line-twin/",
-      "status": "works",
-      "note": "Fresh clone: seed 42 reproduces the committed log byte for byte, 320 of 320 signatures verify, the tampered file fails on event 116 (drill)."
-    },
-    {
-      "slug": "carry-state",
-      "name": "A cell that takes its data with it",
-      "line": "A notes cell moves from process A to process B while a client writes to it 20 times a second. B takes over under a higher epoch, A answers stale writes with 'moved, epoch 2', and writes sent, acknowledged and present all match.",
-      "repo": "https://github.com/ce-net/demo-carry-state",
-      "status": "works",
-      "note": "Fresh clone builds in under a minute; recorded 10 moves at 20 writes/s and 100 moves at 1600 writes/s with 0 writes lost or duplicated and the same hash-chain head on both sides. CI repeats the 100 moves on every push (median freeze 0.65 ms)."
-    },
-    {
-      "slug": "read-before-act",
-      "name": "Read it before you can act",
-      "line": "An approve key that only works after your device signs a read receipt for the exact notice. Approve first and it is refused with the clause that refused it; open the notice and the same call goes through.",
-      "repo": "https://github.com/ce-net/demo-read-before-act",
-      "page": "https://ce-net.github.io/demo-read-before-act/",
-      "status": "works",
-      "note": "Fresh clone: call 1 refused by the require read clause, receipt signed, call 3 (same request) accepted, a fresh verifier agrees; 13 of 13 golden vectors pass ce-net-capability-verify offline."
-    },
-    {
-      "slug": "offline-merge",
-      "name": "Edit offline, merge on reconnect",
-      "line": "A laptop and a phone share a parts list. Pull the cable, edit both sides, plug it back in: both show the same list within a second, the page shows how each conflict was resolved, and both state hashes match.",
-      "repo": "https://github.com/ce-net/demo-offline-merge",
-      "page": "https://ce-net.github.io/demo-offline-merge/",
-      "status": "works",
-      "note": "Fresh clone with empty caches: all five partition scenarios pass in 109 s. Rust and TypeScript replica processes, in every pairing, write byte-identical op logs and reach the golden state hash (db-conformance M1-M5); CI re-checks on every push."
-    },
-    {
-      "slug": "budget-key",
-      "name": "A key with a spending limit",
-      "line": "Give an agent a key worth 100 units and three cells that cost different amounts. A live meter drops with each call; at 3 left a 5-unit call is refused by a cell that has never seen the key, and splitting the key into two keys worth 100 each is refused.",
-      "repo": "https://github.com/ce-net/demo-budget-key",
-      "page": "https://ce-net.github.io/demo-budget-key/",
-      "status": "works",
-      "note": "Fresh clone builds and runs in under a minute: 13 debits to 3 of 100 left, the 5-unit resize and both splits refused. CI fires 10 concurrent clients in 5 rounds; total spend never exceeds 100."
-    },
-    {
-      "slug": "pay-on-proof",
-      "name": "Work that pays only when it checks out",
-      "line": "A requester posts 50 jobs and two workers take them; one is rigged to answer wrong one time in ten. A cheap verifier checks every result, only a pass gets a signed single-use reward token, and the rigged worker's acceptance rate drops live.",
-      "repo": "https://github.com/ce-net/demo-pay-on-proof",
-      "page": "https://ce-net.github.io/demo-pay-on-proof/",
-      "status": "works",
-      "note": "Fresh clone: seed 68 replays the committed report byte for byte; 47 of 50 results paid, all 3 injected wrong answers (one hash, one sort, one solve) rejected, every token verifies and pays once."
-    },
-    {
-      "slug": "revoke-everywhere",
-      "name": "Revoke once, refused everywhere",
-      "line": "Six cells accept one delegated key. Press revoke and each cell turns red as it refuses, with the milliseconds since the revoke. A cut-off cell keeps serving until its 30 s freshness bound runs out, then refuses everything.",
-      "repo": "https://github.com/ce-net/demo-revoke-everywhere",
-      "page": "https://ce-net.github.io/demo-revoke-everywhere/",
-      "status": "works",
-      "note": "Fresh clone: 20 recorded runs, connected cells refuse at p50 1.2 to 1.8 ms (max 30.1 ms), the cut-off cell at 29.9 s max, 0 accepts after max(propagation, 30 s bound)."
-    },
-    {
-      "slug": "live-database",
-      "name": "One struct, three nodes",
-      "line": "One Rust struct becomes a typed Rust client and a generated TypeScript client. Kill one of three nodes mid-run: no write is lost, offline edits merge, two viewers see different rows, and a renamed field fails to compile in both languages.",
-      "repo": "https://github.com/ce-net/live-database",
-      "page": "https://ce-net.github.io/live-database/",
-      "status": "works",
-      "note": "Fresh clone (CI): 1,000 writes with node c killed at 300 and back at 700, 0 lost; 50 of 50 offline conflicts resolved, 0 rows off the reference merge; every proof step signed."
-    },
-    {
-      "slug": "live-fundamentals",
-      "name": "Fundamentals, live",
-      "line": "Ten fundamental cells on a four-node mesh: typed contracts, by_name, ce-gate, cap v3 with Via, state.store, failover, search, orch, pinned builds and wrap. Every call is a signed record.",
-      "repo": "https://github.com/ce-net/live-fundamentals",
-      "page": "https://ce-net.github.io/live-fundamentals/",
-      "status": "partly",
-      "note": "The recorded run verifies offline from a fresh clone and the page replays it; running the mesh yourself needs read access to private ce-net cells."
-    }
-  ]
+  {
+   "slug": "render-compute",
+   "name": "Render across devices",
+   "line": "One image, rendered by several machines at once. The result is pixel-identical to a single-machine render.",
+   "repo": "https://github.com/ce-net/demo-render-compute",
+   "page": "https://ce-net.com/demos/render-compute/",
+   "status": "works",
+   "note": "A fresh clone renders the reference and the tiled frame (one tile killed and retried) to the same hash."
+  },
+  {
+   "slug": "self-healing",
+   "name": "Kill a node, keep the data",
+   "line": "Kill the server holding the data, live. Every saved write survives, and the page proves it with a hash chain.",
+   "repo": "https://github.com/ce-net/demo-self-healing",
+   "page": "https://ce-net.com/demos/self-healing/",
+   "status": "works",
+   "note": "A fresh clone passes the local failover test: 3 leader kills, 351 acknowledged writes, every proof holds."
+  },
+  {
+   "slug": "verified-result",
+   "name": "An engineering result you can re-check",
+   "line": "A physics result that comes with a certificate. Re-check it in your own browser: same code, same inputs, same answer.",
+   "repo": "https://github.com/ce-net/demo-verified-result",
+   "page": "https://ce-net.com/demos/verified/",
+   "status": "works",
+   "note": "A fresh clone verifies all 5 certificates and rejects 440 of 440 tampered edits."
+  },
+  {
+   "slug": "inference",
+   "name": "One prompt, many devices",
+   "line": "Ask a question and see which device answers. When one device drops out, the answer keeps streaming from another.",
+   "repo": "https://github.com/ce-net/demo-inference",
+   "page": "https://ce-net.com/demos/inference/",
+   "status": "partly",
+   "note": "The recorded run is in the repo (98 tokens, 98 of 98 signatures valid, switch at token 12). The live two-device page is not public yet."
+  },
+  {
+   "slug": "follow-me",
+   "name": "Follow-me cell",
+   "line": "A service that moves to whichever machine is closest to you, and keeps answering by the same name while it moves.",
+   "repo": "https://github.com/ce-net/demo-follow-me",
+   "page": "https://ce-net.com/follow-me/",
+   "status": "partly",
+   "note": "The restart on one device is recorded. A recorded move between two devices is not in the repo yet."
+  },
+  {
+   "slug": "playground",
+   "name": "Playground: deploy a cell in your browser",
+   "line": "Write a cell in your browser, deploy it to a real network, and call it from three languages, all within a minute.",
+   "repo": "https://github.com/ce-net/demo-playground",
+   "page": null,
+   "status": "partly",
+   "note": "Code and tests for the sandbox, fuel limit and refusals are public. The hosted playground is not live yet."
+  },
+  {
+   "slug": "one-pinned-action",
+   "name": "A stranger gets exactly one action",
+   "line": "We give you a key that does exactly one thing. Try to make it do more. Every attempt is refused, and the page shows you the rule that refused it.",
+   "repo": "https://github.com/ce-net/demo-one-pinned-action",
+   "page": "https://ce-net.com/demos/one-action/",
+   "status": "partly",
+   "note": "The build needs a protocol crate that is not published yet, so the tests cannot run from outside."
+  },
+  {
+   "slug": "live-typed-data",
+   "name": "Same data, browser and terminal, live",
+   "line": "Change a value in your browser and see it change in a terminal and on a 3D factory map at the same moment. One schema, no server code.",
+   "repo": "https://github.com/ce-net/demo-live-typed-data",
+   "page": "https://ce-net.com/demos/live-data/",
+   "status": "partly",
+   "note": "Recorded logs show 23 and 18 ms end to end and the same type error in both SDKs. Not yet re-run from a fresh clone."
+  },
+  {
+   "slug": "mesh-search",
+   "name": "Search everything you are allowed to see",
+   "line": "One search box across many machines. You only get back what your key allows, and the rest never leaves the machine it lives on.",
+   "repo": "https://github.com/ce-net/demo-mesh-search",
+   "page": "https://ce-net.com/demos/search/",
+   "status": "partly",
+   "note": "The recorded report is in the repo (guest key 11 to 6 hits, engineer key 11 to 11). The build needs crates that are not published yet."
+  },
+  {
+   "slug": "wrap-anything",
+   "name": "Any program becomes a mesh service in one command",
+   "line": "Turn any open-source program into a network service with one command. Then use it from your browser: same output, byte for byte.",
+   "repo": "https://github.com/ce-net/demo-wrap-anything",
+   "page": "https://ce-net.com/demos/wrap/",
+   "status": "partly",
+   "note": "Tests pass and a local run reproduces the recorded output hash. Parity across machines is not re-checked, and one dependency is not public yet."
+  },
+  {
+   "slug": "printer-guard",
+   "name": "Print only through the guard",
+   "line": "Send a print job straight to the printer and it is refused. Send it through the guard, which checks bounds, temperatures, material and time: the 300 C job is rejected, the safe one prints, and a replay is refused.",
+   "repo": "https://github.com/ce-net/demo-printer-guard",
+   "page": "https://github.com/ce-net/demo-printer-guard",
+   "status": "works",
+   "note": "Fresh clone: 4 attempts, 3 refused with the rule that decided, 40 of 40 layers streamed; report matches byte for byte."
+  },
+  {
+   "slug": "signed-receipts",
+   "name": "Every call leaves a receipt",
+   "line": "Run 200 calls across four cells, download the receipts, and check them on any machine with no network. Edit one and the verifier names it; drop one and the chain shows the gap.",
+   "repo": "https://github.com/ce-net/demo-signed-receipts",
+   "page": "https://github.com/ce-net/demo-signed-receipts",
+   "status": "works",
+   "note": "A fresh clone reproduces the 200 receipts byte for byte: 200 of 200 valid, and the tampered and gapped files fail. CI checks it offline."
+  },
+  {
+   "slug": "own-devices-only",
+   "name": "Shared with my devices, nobody else's",
+   "line": "Enroll your laptop, phone and desktop with a pairing code; each gets a key bound to that device. A copied key file is refused, and a lost phone is revoked from the laptop while the other two keep working.",
+   "repo": "https://github.com/ce-net/demo-own-devices-only",
+   "page": "https://github.com/ce-net/demo-own-devices-only",
+   "status": "works",
+   "note": "Fresh clone: 3 devices accepted, the copied key refused by the holder proof, the revoked phone refused 81 ms after the revoke; 11 of 11 golden vectors pass ce-net-capability-verify."
+  },
+  {
+   "slug": "sharded-search",
+   "name": "Sharded search: one leader per shard, rebalanced live",
+   "line": "4.6 million Wikipedia abstracts in 32 shards with 3 replicas each, one leader per shard. Kill a machine under a query loop that never stops: new leaders within one lease, replicas back to three, recall unchanged.",
+   "repo": "https://github.com/ce-net/demo-sharded-search",
+   "page": "https://ce-net.github.io/demo-sharded-search/",
+   "status": "partly",
+   "section": "advanced",
+   "note": "Recorded run: 96 instances, 7 leaders lost with machine-c, new leaders within 3.65 s, all shards back to 3 replicas in 6.57 s, 0 failed queries, recall@10 0.9202 before and after. All machines are processes on one server; the ce-net crates it was designed around are replaced by public stand-ins."
+  },
+  {
+   "slug": "line-twin",
+   "name": "A factory line you can audit",
+   "line": "A three-station line runs as a twin and drill becomes the bottleneck. Download the signed event log: your browser checks every signature and recomputes the numbers. Edit one timestamp and it names the event that broke.",
+   "repo": "https://github.com/ce-net/demo-line-twin",
+   "page": "https://ce-net.github.io/demo-line-twin/",
+   "status": "works",
+   "note": "Fresh clone: seed 42 reproduces the committed log byte for byte, 320 of 320 signatures verify, the tampered file fails on event 116 (drill)."
+  },
+  {
+   "slug": "carry-state",
+   "name": "A cell that takes its data with it",
+   "line": "A notes cell moves from process A to process B while a client writes to it 20 times a second. B takes over under a higher epoch, A answers stale writes with 'moved, epoch 2', and writes sent, acknowledged and present all match.",
+   "repo": "https://github.com/ce-net/demo-carry-state",
+   "status": "works",
+   "note": "Fresh clone builds in under a minute; recorded 10 moves at 20 writes/s and 100 moves at 1600 writes/s with 0 writes lost or duplicated and the same hash-chain head on both sides. CI repeats the 100 moves on every push (median freeze 0.65 ms)."
+  },
+  {
+   "slug": "read-before-act",
+   "name": "Read it before you can act",
+   "line": "An approve key that only works after your device signs a read receipt for the exact notice. Approve first and it is refused with the clause that refused it; open the notice and the same call goes through.",
+   "repo": "https://github.com/ce-net/demo-read-before-act",
+   "page": "https://ce-net.github.io/demo-read-before-act/",
+   "status": "works",
+   "note": "Fresh clone: call 1 refused by the require read clause, receipt signed, call 3 (same request) accepted, a fresh verifier agrees; 13 of 13 golden vectors pass ce-net-capability-verify offline."
+  },
+  {
+   "slug": "offline-merge",
+   "name": "Edit offline, merge on reconnect",
+   "line": "A laptop and a phone share a parts list. Pull the cable, edit both sides, plug it back in: both show the same list within a second, the page shows how each conflict was resolved, and both state hashes match.",
+   "repo": "https://github.com/ce-net/demo-offline-merge",
+   "page": "https://ce-net.github.io/demo-offline-merge/",
+   "status": "works",
+   "note": "Fresh clone with empty caches: all five partition scenarios pass in 109 s. Rust and TypeScript replica processes, in every pairing, write byte-identical op logs and reach the golden state hash (db-conformance M1-M5); CI re-checks on every push."
+  },
+  {
+   "slug": "budget-key",
+   "name": "A key with a spending limit",
+   "line": "Give an agent a key worth 100 units and three cells that cost different amounts. A live meter drops with each call; at 3 left a 5-unit call is refused by a cell that has never seen the key, and splitting the key into two keys worth 100 each is refused.",
+   "repo": "https://github.com/ce-net/demo-budget-key",
+   "page": "https://ce-net.github.io/demo-budget-key/",
+   "status": "works",
+   "note": "Fresh clone builds and runs in under a minute: 13 debits to 3 of 100 left, the 5-unit resize and both splits refused. CI fires 10 concurrent clients in 5 rounds; total spend never exceeds 100."
+  },
+  {
+   "slug": "pay-on-proof",
+   "name": "Work that pays only when it checks out",
+   "line": "A requester posts 50 jobs and two workers take them; one is rigged to answer wrong one time in ten. A cheap verifier checks every result, only a pass gets a signed single-use reward token, and the rigged worker's acceptance rate drops live.",
+   "repo": "https://github.com/ce-net/demo-pay-on-proof",
+   "page": "https://ce-net.github.io/demo-pay-on-proof/",
+   "status": "works",
+   "note": "Fresh clone: seed 68 replays the committed report byte for byte; 47 of 50 results paid, all 3 injected wrong answers (one hash, one sort, one solve) rejected, every token verifies and pays once."
+  },
+  {
+   "slug": "revoke-everywhere",
+   "name": "Revoke once, refused everywhere",
+   "line": "Six cells accept one delegated key. Press revoke and each cell turns red as it refuses, with the milliseconds since the revoke. A cut-off cell keeps serving until its 30 s freshness bound runs out, then refuses everything.",
+   "repo": "https://github.com/ce-net/demo-revoke-everywhere",
+   "page": "https://ce-net.github.io/demo-revoke-everywhere/",
+   "status": "works",
+   "note": "Fresh clone: 20 recorded runs, connected cells refuse at p50 1.2 to 1.8 ms (max 30.1 ms), the cut-off cell at 29.9 s max, 0 accepts after max(propagation, 30 s bound)."
+  },
+  {
+   "slug": "live-database",
+   "name": "One struct, three nodes",
+   "line": "One Rust struct becomes a typed Rust client and a generated TypeScript client. Kill one of three nodes mid-run: no write is lost, offline edits merge, two viewers see different rows, and a renamed field fails to compile in both languages.",
+   "repo": "https://github.com/ce-net/live-database",
+   "page": "https://ce-net.github.io/live-database/",
+   "status": "works",
+   "note": "Fresh clone (CI): 1,000 writes with node c killed at 300 and back at 700, 0 lost; 50 of 50 offline conflicts resolved, 0 rows off the reference merge; every proof step signed."
+  },
+  {
+   "slug": "live-fundamentals",
+   "name": "Fundamentals, live",
+   "line": "Ten fundamental cells on a four-node mesh: typed contracts, by_name, ce-gate, cap v3 with Via, state.store, failover, search, orch, pinned builds and wrap. Every call is a signed record.",
+   "repo": "https://github.com/ce-net/live-fundamentals",
+   "page": "https://ce-net.github.io/live-fundamentals/",
+   "status": "partly",
+   "note": "The recorded run verifies offline from a fresh clone and the page replays it; running the mesh yourself needs read access to private ce-net cells."
+  },
+  {
+   "slug": "live-search",
+   "name": "Find a cell, call it",
+   "line": "Ask in plain words, “turn this STL into a print-ready gcode”: search ranks the cells with their typed contracts, a language model picks one and cites its fields, the build already holds that contract as Rust, orch starts the cell where it fits and a count-1 grant allows exactly one call. Or the job goes to a board and a worker returns a signed result.",
+   "repo": "https://github.com/ce-net/live-search",
+   "page": "https://ce-net.github.io/live-search/",
+   "status": "works",
+   "note": "Fresh clone (CI): the whole loop on four node processes, 22 signed steps; count-1 grant 1 allowed and 1 refused; worker signature valid; capability search recall@1 16/20 to 20/20, held-out 8/10 (at 5: 8 to 9). The advisor's answers were asked live and are replayed from the recorded transcript; the two work cells are stand-ins with the real contracts."
+  }
+ ]
 }
