@@ -140,6 +140,14 @@
       "page": "https://ce-net.github.io/demo-demo-line-twin/",
       "status": "works",
       "note": "Fresh clone: seed 42 reproduces the committed log byte for byte, 320 of 320 signatures verify, the tampered file fails on event 116 (drill)."
+    },
+    {
+      "slug": "carry-state",
+      "name": "A cell that takes its data with it",
+      "line": "A notes cell moves from process A to process B while a client writes to it 20 times a second. B takes over under a higher epoch, A answers stale writes with 'moved, epoch 2', and writes sent, acknowledged and present all match.",
+      "repo": "https://github.com/ce-net/demo-demo-carry-state",
+      "status": "works",
+      "note": "Fresh clone builds in under a minute; recorded 10 moves at 20 writes/s and 100 moves at 1600 writes/s with 0 writes lost or duplicated and the same hash-chain head on both sides. CI repeats the 100 moves on every push (median freeze 0.65 ms)."
     }
   ]
 }

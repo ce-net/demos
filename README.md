@@ -1,6 +1,6 @@
 # ce-net demos
 
-Fifteen demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
+Sixteen demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
 killed server without losing a write, hand a stranger a key that does exactly one thing, and more. Each one is its own
 repo, Apache-2.0, built from reusable ce-net cells, with its recorded proof in the repo.
 
@@ -27,6 +27,9 @@ outside yet.
   bound to that device. A copied key file is refused, and a lost phone is revoked from the laptop while the other two
   keep working.
 - [A factory line you can audit](https://github.com/ce-net/demo-demo-line-twin): A three-station line runs as a twin and drill becomes the bottleneck. Download the signed event log: your browser checks every signature and recomputes the numbers. Edit one timestamp and it names the event that broke.
+- [A cell that takes its data with it](https://github.com/ce-net/demo-demo-carry-state): A notes cell moves from process A
+  to process B while a client writes to it 20 times a second. B takes over under a higher epoch, A answers stale writes
+  with "moved, epoch 2", and writes sent, acknowledged and present all match.
 
 ## Partly
 
