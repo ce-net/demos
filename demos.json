@@ -211,6 +211,15 @@
       "page": "https://ce-net.github.io/live-database/",
       "status": "works",
       "note": "Fresh clone (CI): 1,000 writes with node c killed at 300 and back at 700, 0 lost; 50 of 50 offline conflicts resolved, 0 rows off the reference merge; every proof step signed."
+    },
+    {
+      "slug": "live-fundamentals",
+      "name": "Fundamentals, live",
+      "line": "Ten fundamental cells on a four-node mesh: typed contracts, by_name, ce-gate, cap v3 with Via, state.store, failover, search, orch, pinned builds and wrap. Every call is a signed record.",
+      "repo": "https://github.com/ce-net/live-fundamentals",
+      "page": "https://ce-net.github.io/live-fundamentals/",
+      "status": "partly",
+      "note": "The recorded run verifies offline from a fresh clone and the page replays it; running the mesh yourself needs read access to private ce-net cells."
     }
   ]
 }
