@@ -2,8 +2,8 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ce-net demos</title>
-<meta name="description" content="Twenty-two demos of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
-<meta property="og:title" content="ce-net demos"><meta property="og:description" content="Twenty-two demos of things a network of ordinary devices can do together, each open source with its proof.">
+<meta name="description" content="Twenty-four demos of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
+<meta property="og:title" content="ce-net demos"><meta property="og:description" content="Twenty-four demos of things a network of ordinary devices can do together, each open source with its proof.">
 <meta property="og:type" content="website"><meta property="og:image" content="https://design.ce-net.com/v1/logo/ce-net-og.png">
 <meta name="theme-color" content="#070807">
 <link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
@@ -41,7 +41,7 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <button class="tog" type="button" id="tog" aria-label="Switch between dark and light">Light</button></header>
 
 <div class="crumb">ce-net / <b>Demos</b></div>
-<h1 class="display lg">Twenty-two demos.</h1>
+<h1 class="display lg">Twenty-four demos.</h1>
 <p class="lede">Things a network of ordinary devices can do together. Each one is its own open-source repo, built from reusable cells, with its recorded proof inside.</p>
 <div class="key">
   <div class="label"><i class="g"></i>Works <span class="t">re-run from a fresh clone, numbers reproduced</span></div>
@@ -90,11 +90,6 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <p>A three-station line runs as a twin and drill becomes the bottleneck. Download the signed event log: your browser checks every signature and recomputes the numbers. Edit one timestamp and it names the event that broke.</p>
 <div class="note">Fresh clone: seed 42 reproduces the committed log byte for byte, 320 of 320 signatures verify, the tampered file fails on event 116 (drill).</div>
 <a class="go" href="https://ce-net.github.io/demo-line-twin/">Open the page</a> <a class="go" href="https://github.com/ce-net/demo-line-twin">Source and proof</a></article></li>
-<li><article class="glass card"><div class="label"><i></i>Partly</div>
-<h3>Fundamentals, live</h3>
-<p>Ten fundamental cells walked through on a four-node mesh: a typed contract, by_name over four routes, ce-gate grants, a cap v3 chain that only works through a broker, state.store, a leader killed mid-write, search, orch, a pinned build and an ordinary binary wrapped as a cell.</p>
-<div class="note">Recorded: failover to a new leader in 2852 ms with 0 of 300 acknowledged writes lost, two clean builds with the same sha256, 4 of 4 refusals as meant; the page checks all 38 signed records. Running the mesh needs read access to private ce-net cells.</div>
-<a class="go" href="https://ce-net.github.io/live-fundamentals/">Open the page</a> <a class="go" href="https://github.com/ce-net/live-fundamentals">Source and proof</a></article></li>
 <li><article class="glass card"><div class="label"><i class="g"></i>Works</div>
 <h3>A cell that takes its data with it</h3>
 <p>A notes cell moves from process A to process B while a client writes to it 20 times a second. B takes over under a higher epoch, A answers stale writes with &ldquo;moved, epoch 2&rdquo;, and writes sent, acknowledged and present all match.</p>
@@ -132,8 +127,13 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <a class="go" href="https://ce-net.github.io/live-database/">Open the page</a> <a class="go" href="https://github.com/ce-net/live-database">Source and proof</a></article></li>
 </ul>
 
-<h2>Partly · 7</h2>
+<h2>Partly · 8</h2>
 <ul class="grid">
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>Fundamentals, live</h3>
+<p>Ten fundamental cells walked through on a four-node mesh: a typed contract, by_name over four routes, ce-gate grants, a cap v3 chain that only works through a broker, state.store, a leader killed mid-write, search, orch, a pinned build and an ordinary binary wrapped as a cell.</p>
+<div class="note">Recorded: failover to a new leader in 2852 ms with 0 of 300 acknowledged writes lost, two clean builds with the same sha256, 4 of 4 refusals as meant; the page checks all 38 signed records. Running the mesh needs read access to private ce-net cells.</div>
+<a class="go" href="https://ce-net.github.io/live-fundamentals/">Open the page</a> <a class="go" href="https://github.com/ce-net/live-fundamentals">Source and proof</a></article></li>
 <li><article class="glass card"><div class="label"><i></i>Partly</div>
 <h3>One prompt, many devices</h3>
 <p>Ask a question and see which device answers. When one device drops out, the answer keeps streaming from another.</p>

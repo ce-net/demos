@@ -1,6 +1,6 @@
 # ce-net demos
 
-Twenty-two demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
+Twenty-four demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
 killed server without losing a write, hand a stranger a key that does exactly one thing, and more. Each one is its own
 repo, Apache-2.0, built from reusable ce-net cells, with its recorded proof in the repo.
 
@@ -36,6 +36,7 @@ outside yet.
 - [Work that pays only when it checks out](https://github.com/ce-net/demo-pay-on-proof): A requester posts 50 jobs and two workers take them; one is rigged to answer wrong one time in ten. A cheap verifier checks every result, only a pass gets a signed single-use reward token, and the rigged worker's acceptance rate drops live. [Page](https://ce-net.github.io/demo-pay-on-proof/).
 - [Revoke once, refused everywhere](https://github.com/ce-net/demo-revoke-everywhere): Six cells accept one delegated key. Press revoke and each cell turns red as it refuses, with the milliseconds since the revoke. A cut-off cell keeps serving until its 30 s freshness bound runs out, then refuses everything.
 - [One struct, three nodes](https://github.com/ce-net/live-database): One Rust struct becomes a typed Rust client and a generated TypeScript client. Kill one of three nodes mid-run: no write is lost, offline edits merge, two viewers see different rows, and a renamed field fails to compile in both languages.
+- [References: anything to anything](https://github.com/ce-net/live-refs): One kind of name reaches a file on a laptop, a blob, a repo file at a commit, a node, a person, a cell op, a capability and an enterprise system. It follows moves and refuses changed bytes.
 
 ## Partly
 
