@@ -148,6 +148,15 @@
       "repo": "https://github.com/ce-net/demo-demo-carry-state",
       "status": "works",
       "note": "Fresh clone builds in under a minute; recorded 10 moves at 20 writes/s and 100 moves at 1600 writes/s with 0 writes lost or duplicated and the same hash-chain head on both sides. CI repeats the 100 moves on every push (median freeze 0.65 ms)."
+    },
+    {
+      "slug": "read-before-act",
+      "name": "Read it before you can act",
+      "line": "An approve key that only works after your device signs a read receipt for the exact notice. Approve first and it is refused with the clause that refused it; open the notice and the same call goes through.",
+      "repo": "https://github.com/ce-net/demo-demo-read-before-act",
+      "page": "https://ce-net.github.io/demo-demo-read-before-act/",
+      "status": "works",
+      "note": "Fresh clone: call 1 refused by the require read clause, receipt signed, call 3 (same request) accepted, a fresh verifier agrees; 13 of 13 golden vectors pass ce-net-capability-verify offline."
     }
   ]
 }
