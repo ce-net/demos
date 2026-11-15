@@ -1,6 +1,6 @@
 # ce-net demos
 
-Twelve demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
+Thirteen demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
 killed server without losing a write, hand a stranger a key that does exactly one thing, and more. Each one is its own
 repo, Apache-2.0, built from reusable ce-net cells, with its recorded proof in the repo.
 
@@ -23,6 +23,9 @@ outside yet.
   the safe one prints, and a replay of the forwarded call is refused.
 - [Every call leaves a receipt](https://github.com/ce-net/demo-demo-signed-receipts): Run 200 calls across four cells, download the receipts, and check them
   on any machine with no network. Edit one and the verifier names it; drop one and the chain shows the gap.
+- [Shared with my devices, nobody else's](https://github.com/ce-net/demo-demo-own-devices-only): Enroll your laptop, phone and desktop with a pairing code; each gets a key
+  bound to that device. A copied key file is refused, and a lost phone is revoked from the laptop while the other two
+  keep working.
 
 ## Partly
 

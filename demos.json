@@ -112,6 +112,15 @@
       "page": "https://github.com/ce-net/demo-demo-signed-receipts",
       "status": "works",
       "note": "A fresh clone reproduces the 200 receipts byte for byte: 200 of 200 valid, and the tampered and gapped files fail. CI checks it offline."
+    },
+    {
+      "slug": "own-devices-only",
+      "name": "Shared with my devices, nobody else's",
+      "line": "Enroll your laptop, phone and desktop with a pairing code; each gets a key bound to that device. A copied key file is refused, and a lost phone is revoked from the laptop while the other two keep working.",
+      "repo": "https://github.com/ce-net/demo-demo-own-devices-only",
+      "page": "https://github.com/ce-net/demo-demo-own-devices-only",
+      "status": "works",
+      "note": "Fresh clone: 3 devices accepted, the copied key refused by the holder proof, the revoked phone refused 81 ms after the revoke; 11 of 11 golden vectors pass ce-net-capability-verify."
     }
   ]
 }
