@@ -6,6 +6,15 @@
   },
   "demos": [
     {
+      "slug": "live-shop",
+      "name": "A store made of cells",
+      "line": "An online store in which the catalog, cart, inventory, order saga, test payments, gateway and page are each a cell with a typed contract. Stop the leaders mid-checkout: nothing is oversold, and no order is lost or made twice.",
+      "repo": "https://github.com/ce-net/live-shop",
+      "page": "https://ce-net.github.io/live-shop/",
+      "status": "works",
+      "note": "CI builds a fresh clone and reruns the proofs. Recorded: 20 of 20 seeded runs pass A1-A6 (4000 orders, 971 confirmed, none oversold, none doubled). A renamed field breaks both the page and the Rust build. Payments run in test mode only."
+    },
+    {
       "slug": "live-refs",
       "name": "References: anything to anything",
       "line": "One kind of name reaches a file on a laptop, a blob, a repo file at a commit, a node, a person, a cell op, a capability and an enterprise system. It follows moves and refuses changed bytes.",

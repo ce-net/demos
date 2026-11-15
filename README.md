@@ -1,6 +1,6 @@
 # ce-net live systems
 
-Twenty-five live systems of things a network of ordinary devices can do together: render one frame on several machines, survive a
+Twenty-six live systems of things a network of ordinary devices can do together: render one frame on several machines, survive a
 killed server without losing a write, hand a stranger a key that does exactly one thing, and more. Each one is its own
 repo, Apache-2.0, built from reusable ce-net cells, with its recorded proof in the repo.
 
@@ -12,6 +12,9 @@ outside yet.
 
 ## Works
 
+- [A store made of cells](https://github.com/ce-net/live-shop): An online store in which the catalog, cart, inventory,
+  order saga, test payments, gateway and page are each a cell with a typed contract. Stop the leaders mid-checkout:
+  nothing is oversold, and no order is lost or made twice.
 - [Render across devices](https://github.com/ce-net/demo-render-compute): One image, rendered by several machines at
   once. The result is pixel-identical to a single-machine render.
 - [Kill a node, keep the data](https://github.com/ce-net/demo-self-healing): Kill the server holding the data, live.
