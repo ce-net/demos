@@ -6,6 +6,15 @@
   },
   "demos": [
     {
+      "slug": "live-refs",
+      "name": "References: anything to anything",
+      "line": "One kind of name reaches a file on a laptop, a blob, a repo file at a commit, a node, a person, a cell op, a capability and an enterprise system. It follows moves and refuses changed bytes.",
+      "repo": "https://github.com/ce-net/live-refs",
+      "page": "https://ce-net.github.io/live-refs/",
+      "status": "works",
+      "note": "A fresh clone runs four devices and eight steps: 9 of 9 kinds resolved, 2 of 2 tampered files refused, 3 of 3 offline resolves, 60 of 60 ids byte-identical. A live system."
+    },
+    {
       "slug": "render-compute",
       "name": "Render across devices",
       "line": "One image, rendered by several machines at once. The result is pixel-identical to a single-machine render.",
