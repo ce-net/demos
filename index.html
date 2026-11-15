@@ -2,8 +2,8 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ce-net demos</title>
-<meta name="description" content="Seventeen demos of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
-<meta property="og:title" content="ce-net demos"><meta property="og:description" content="Seventeen demos of things a network of ordinary devices can do together, each open source with its proof.">
+<meta name="description" content="Eighteen demos of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
+<meta property="og:title" content="ce-net demos"><meta property="og:description" content="Eighteen demos of things a network of ordinary devices can do together, each open source with its proof.">
 <meta property="og:type" content="website"><meta property="og:image" content="https://design.ce-net.com/v1/logo/ce-net-og.png">
 <meta name="theme-color" content="#070807">
 <link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
@@ -41,14 +41,14 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <button class="tog" type="button" id="tog" aria-label="Switch between dark and light">Light</button></header>
 
 <div class="crumb">ce-net / <b>Demos</b></div>
-<h1 class="display lg">Seventeen demos.</h1>
+<h1 class="display lg">Eighteen demos.</h1>
 <p class="lede">Things a network of ordinary devices can do together. Each one is its own open-source repo, built from reusable cells, with its recorded proof inside.</p>
 <div class="key">
   <div class="label"><i class="g"></i>Works <span class="t">re-run from a fresh clone, numbers reproduced</span></div>
   <div class="label"><i></i>Partly <span class="t">code and recorded proof public; the note says what is missing</span></div>
 </div>
 
-<h2>Works · 9</h2>
+<h2>Works · 10</h2>
 <ul class="grid">
 <li class="feat"><article class="glass ticks card"><div class="label"><i class="g"></i>Works</div>
 <h3>Render across devices</h3>
@@ -95,6 +95,11 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <p>An approve key that only works after your device signs a read receipt for the exact notice. Approve first and it is refused with the clause that refused it; open the notice and the same call goes through.</p>
 <div class="note">Fresh clone: call 1 refused by the require read clause, receipt signed, call 3 (same request) accepted, a fresh verifier agrees; 13 of 13 golden vectors pass ce-net-capability-verify offline.</div>
 <a class="go" href="https://ce-net.github.io/demo-demo-read-before-act/">Open the page</a> <a class="go" href="https://github.com/ce-net/demo-demo-read-before-act">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i class="g"></i>Works</div>
+<h3>Edit offline, merge on reconnect</h3>
+<p>A laptop and a phone share a parts list. Pull the cable, edit both sides, plug it back in: both show the same list within a second, the page shows how each conflict was resolved, and both state hashes match.</p>
+<div class="note">Fresh clone with empty caches: all five partition scenarios pass in 109 s. Rust and TypeScript replica processes, in every pairing, write byte-identical op logs and reach the golden state hash (db-conformance M1-M5); CI re-checks on every push.</div>
+<a class="go" href="https://ce-net.github.io/demo-demo-offline-merge/">Open the page</a> <a class="go" href="https://github.com/ce-net/demo-demo-offline-merge">Source and proof</a></article></li>
 </ul>
 
 <h2>Partly · 7</h2>

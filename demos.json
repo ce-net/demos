@@ -157,6 +157,15 @@
       "page": "https://ce-net.github.io/demo-demo-read-before-act/",
       "status": "works",
       "note": "Fresh clone: call 1 refused by the require read clause, receipt signed, call 3 (same request) accepted, a fresh verifier agrees; 13 of 13 golden vectors pass ce-net-capability-verify offline."
+    },
+    {
+      "slug": "offline-merge",
+      "name": "Edit offline, merge on reconnect",
+      "line": "A laptop and a phone share a parts list. Pull the cable, edit both sides, plug it back in: both show the same list within a second, the page shows how each conflict was resolved, and both state hashes match.",
+      "repo": "https://github.com/ce-net/demo-demo-offline-merge",
+      "page": "https://ce-net.github.io/demo-demo-offline-merge/",
+      "status": "works",
+      "note": "Fresh clone with empty caches: all five partition scenarios pass in 109 s. Rust and TypeScript replica processes, in every pairing, write byte-identical op logs and reach the golden state hash (db-conformance M1-M5); CI re-checks on every push."
     }
   ]
 }

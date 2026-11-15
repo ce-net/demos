@@ -1,6 +1,6 @@
 # ce-net demos
 
-Seventeen demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
+Eighteen demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
 killed server without losing a write, hand a stranger a key that does exactly one thing, and more. Each one is its own
 repo, Apache-2.0, built from reusable ce-net cells, with its recorded proof in the repo.
 
@@ -31,6 +31,7 @@ outside yet.
   to process B while a client writes to it 20 times a second. B takes over under a higher epoch, A answers stale writes
   with "moved, epoch 2", and writes sent, acknowledged and present all match.
 - [Read it before you can act](https://github.com/ce-net/demo-demo-read-before-act): An approve key that only works after your device signs a read receipt for the exact notice. Approve first and it is refused with the clause that refused it; open the notice and the same call goes through.
+- [Edit offline, merge on reconnect](https://github.com/ce-net/demo-demo-offline-merge): A laptop and a phone share a parts list. Pull the cable, edit both sides, plug it back in: both show the same list within a second, the page shows how each conflict was resolved, and both state hashes match.
 
 ## Partly
 
