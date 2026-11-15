@@ -103,6 +103,15 @@
       "page": "https://github.com/ce-net/demo-printer-guard",
       "status": "works",
       "note": "Fresh clone: 4 attempts, 3 refused with the rule that decided, 40 of 40 layers streamed; report matches byte for byte."
+    },
+    {
+      "slug": "signed-receipts",
+      "name": "Every call leaves a receipt",
+      "line": "Run 200 calls across four cells, download the receipts, and check them on any machine with no network. Edit one and the verifier names it; drop one and the chain shows the gap.",
+      "repo": "https://github.com/ce-net/demo-demo-signed-receipts",
+      "page": "https://github.com/ce-net/demo-demo-signed-receipts",
+      "status": "works",
+      "note": "A fresh clone reproduces the 200 receipts byte for byte: 200 of 200 valid, and the tampered and gapped files fail. CI checks it offline."
     }
   ]
 }
