@@ -131,6 +131,15 @@
       "status": "partly",
       "section": "advanced",
       "note": "Recorded run: 96 instances, 7 leaders lost with machine-c, new leaders within 3.65 s, all shards back to 3 replicas in 6.57 s, 0 failed queries, recall@10 0.9202 before and after. All machines are processes on one server; the ce-net crates it was designed around are replaced by public stand-ins."
+    },
+    {
+      "slug": "line-twin",
+      "name": "A factory line you can audit",
+      "line": "A three-station line runs as a twin and drill becomes the bottleneck. Download the signed event log: your browser checks every signature and recomputes the numbers. Edit one timestamp and it names the event that broke.",
+      "repo": "https://github.com/ce-net/demo-demo-line-twin",
+      "page": "https://ce-net.github.io/demo-demo-line-twin/",
+      "status": "works",
+      "note": "Fresh clone: seed 42 reproduces the committed log byte for byte, 320 of 320 signatures verify, the tampered file fails on event 116 (drill)."
     }
   ]
 }
