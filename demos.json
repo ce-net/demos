@@ -175,6 +175,15 @@
       "page": "https://ce-net.github.io/demo-demo-budget-key/",
       "status": "works",
       "note": "Fresh clone builds and runs in under a minute: 13 debits to 3 of 100 left, the 5-unit resize and both splits refused. CI fires 10 concurrent clients in 5 rounds; total spend never exceeds 100."
+    },
+    {
+      "slug": "pay-on-proof",
+      "name": "Work that pays only when it checks out",
+      "line": "A requester posts 50 jobs and two workers take them; one is rigged to answer wrong one time in ten. A cheap verifier checks every result, only a pass gets a signed single-use reward token, and the rigged worker's acceptance rate drops live.",
+      "repo": "https://github.com/ce-net/demo-pay-on-proof",
+      "page": "https://ce-net.github.io/demo-pay-on-proof/",
+      "status": "works",
+      "note": "Fresh clone: seed 68 replays the committed report byte for byte; 47 of 50 results paid, all 3 injected wrong answers (one hash, one sort, one solve) rejected, every token verifies and pays once."
     }
   ]
 }

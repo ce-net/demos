@@ -2,8 +2,8 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ce-net demos</title>
-<meta name="description" content="Nineteen demos of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
-<meta property="og:title" content="ce-net demos"><meta property="og:description" content="Nineteen demos of things a network of ordinary devices can do together, each open source with its proof.">
+<meta name="description" content="Twenty demos of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
+<meta property="og:title" content="ce-net demos"><meta property="og:description" content="Twenty demos of things a network of ordinary devices can do together, each open source with its proof.">
 <meta property="og:type" content="website"><meta property="og:image" content="https://design.ce-net.com/v1/logo/ce-net-og.png">
 <meta name="theme-color" content="#070807">
 <link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
@@ -41,14 +41,14 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <button class="tog" type="button" id="tog" aria-label="Switch between dark and light">Light</button></header>
 
 <div class="crumb">ce-net / <b>Demos</b></div>
-<h1 class="display lg">Nineteen demos.</h1>
+<h1 class="display lg">Twenty demos.</h1>
 <p class="lede">Things a network of ordinary devices can do together. Each one is its own open-source repo, built from reusable cells, with its recorded proof inside.</p>
 <div class="key">
   <div class="label"><i class="g"></i>Works <span class="t">re-run from a fresh clone, numbers reproduced</span></div>
   <div class="label"><i></i>Partly <span class="t">code and recorded proof public; the note says what is missing</span></div>
 </div>
 
-<h2>Works · 11</h2>
+<h2>Works · 12</h2>
 <ul class="grid">
 <li class="feat"><article class="glass ticks card"><div class="label"><i class="g"></i>Works</div>
 <h3>Render across devices</h3>
@@ -105,6 +105,11 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <p>Give an agent a key worth 100 units and three cells that cost different amounts. A live meter drops with each call; at 3 left a 5-unit call is refused by a cell that has never seen the key, and splitting the key into two keys worth 100 each is refused.</p>
 <div class="note">Fresh clone builds and runs in under a minute: 13 debits to 3 of 100 left, the 5-unit resize and both splits refused. CI fires 10 concurrent clients in 5 rounds; total spend never exceeds 100.</div>
 <a class="go" href="https://ce-net.github.io/demo-demo-budget-key/">Open the page</a> <a class="go" href="https://github.com/ce-net/demo-demo-budget-key">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i class="g"></i>Works</div>
+<h3>Work that pays only when it checks out</h3>
+<p>A requester posts 50 jobs and two workers take them; one is rigged to answer wrong one time in ten. A cheap verifier checks every result, only a pass gets a signed single-use reward token, and the rigged worker's acceptance rate drops live.</p>
+<div class="note">Fresh clone: seed 68 replays the committed report byte for byte; 47 of 50 results paid, all 3 injected wrong answers (one hash, one sort, one solve) rejected, every token verifies and pays once.</div>
+<a class="go" href="https://ce-net.github.io/demo-pay-on-proof/">Open the page</a> <a class="go" href="https://github.com/ce-net/demo-pay-on-proof">Source and proof</a></article></li>
 </ul>
 
 <h2>Partly · 7</h2>

@@ -1,6 +1,6 @@
 # ce-net demos
 
-Nineteen demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
+Twenty demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
 killed server without losing a write, hand a stranger a key that does exactly one thing, and more. Each one is its own
 repo, Apache-2.0, built from reusable ce-net cells, with its recorded proof in the repo.
 
@@ -33,6 +33,7 @@ outside yet.
 - [Read it before you can act](https://github.com/ce-net/demo-demo-read-before-act): An approve key that only works after your device signs a read receipt for the exact notice. Approve first and it is refused with the clause that refused it; open the notice and the same call goes through.
 - [Edit offline, merge on reconnect](https://github.com/ce-net/demo-demo-offline-merge): A laptop and a phone share a parts list. Pull the cable, edit both sides, plug it back in: both show the same list within a second, the page shows how each conflict was resolved, and both state hashes match.
 - [A key with a spending limit](https://github.com/ce-net/demo-demo-budget-key): Give an agent a key worth 100 units and three cells that cost different amounts. A live meter drops with each call; at 3 left a 5-unit call is refused by a cell that has never seen the key, and splitting the key into two keys worth 100 each is refused.
+- [Work that pays only when it checks out](https://github.com/ce-net/demo-pay-on-proof): A requester posts 50 jobs and two workers take them; one is rigged to answer wrong one time in ten. A cheap verifier checks every result, only a pass gets a signed single-use reward token, and the rigged worker's acceptance rate drops live. [Page](https://ce-net.github.io/demo-pay-on-proof/).
 
 ## Partly
 
