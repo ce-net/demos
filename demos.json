@@ -166,6 +166,15 @@
       "page": "https://ce-net.github.io/demo-demo-offline-merge/",
       "status": "works",
       "note": "Fresh clone with empty caches: all five partition scenarios pass in 109 s. Rust and TypeScript replica processes, in every pairing, write byte-identical op logs and reach the golden state hash (db-conformance M1-M5); CI re-checks on every push."
+    },
+    {
+      "slug": "budget-key",
+      "name": "A key with a spending limit",
+      "line": "Give an agent a key worth 100 units and three cells that cost different amounts. A live meter drops with each call; at 3 left a 5-unit call is refused by a cell that has never seen the key, and splitting the key into two keys worth 100 each is refused.",
+      "repo": "https://github.com/ce-net/demo-demo-budget-key",
+      "page": "https://ce-net.github.io/demo-demo-budget-key/",
+      "status": "works",
+      "note": "Fresh clone builds and runs in under a minute: 13 debits to 3 of 100 left, the 5-unit resize and both splits refused. CI fires 10 concurrent clients in 5 rounds; total spend never exceeds 100."
     }
   ]
 }
