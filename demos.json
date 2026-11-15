@@ -121,6 +121,16 @@
       "page": "https://github.com/ce-net/demo-demo-own-devices-only",
       "status": "works",
       "note": "Fresh clone: 3 devices accepted, the copied key refused by the holder proof, the revoked phone refused 81 ms after the revoke; 11 of 11 golden vectors pass ce-net-capability-verify."
+    },
+    {
+      "slug": "sharded-search",
+      "name": "Sharded search: one leader per shard, rebalanced live",
+      "line": "4.6 million Wikipedia abstracts in 32 shards with 3 replicas each, one leader per shard. Kill a machine under a query loop that never stops: new leaders within one lease, replicas back to three, recall unchanged.",
+      "repo": "https://github.com/ce-net/demo-sharded-search",
+      "page": "https://ce-net.github.io/demo-sharded-search/",
+      "status": "partly",
+      "section": "advanced",
+      "note": "Recorded run: 96 instances, 7 leaders lost with machine-c, new leaders within 3.65 s, all shards back to 3 replicas in 6.57 s, 0 failed queries, recall@10 0.9202 before and after. All machines are processes on one server; the ce-net crates it was designed around are replaced by public stand-ins."
     }
   ]
 }

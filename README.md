@@ -1,6 +1,6 @@
 # ce-net demos
 
-Thirteen demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
+Fourteen demos of things a network of ordinary devices can do together: render one frame on several machines, survive a
 killed server without losing a write, hand a stranger a key that does exactly one thing, and more. Each one is its own
 repo, Apache-2.0, built from reusable ce-net cells, with its recorded proof in the repo.
 
@@ -50,6 +50,14 @@ outside yet.
 - **Partly.** [Any program becomes a mesh service in one command](https://github.com/ce-net/demo-wrap-anything): Turn
   any open-source program into a network service with one command. Then use it from your browser: same output, byte for
   byte. *Tests pass locally; parity across machines is not re-checked here, and one dependency is not public yet.*
+
+## Advanced
+
+Large distributed systems on the cell network: many cell instances, each with its own identity, spread over the
+real machines we have, and built to take more machines with no config change.
+
+- **Partly.** [Sharded search: one leader per shard, rebalanced live](https://github.com/ce-net/demo-sharded-search): 4.6 million Wikipedia abstracts in 32 shards with 3 replicas each, one leader per shard. Kill a machine under a query loop that never stops: new leaders within one lease, replicas back to three, recall unchanged.
+  *Recorded run: 96 instances, 7 leaders lost with machine-c, new leaders within 3.65 s, all shards back to 3 replicas in 6.57 s, 0 failed queries, recall@10 0.9202 before and after. All machines are processes on one server; the ce-net crates it was designed around are replaced by public stand-ins.* [Page](https://ce-net.github.io/demo-sharded-search/)
 
 The same list as data, for tools and search: [demos.json](demos.json).
 

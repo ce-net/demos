@@ -2,8 +2,8 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ce-net demos</title>
-<meta name="description" content="Thirteen demos of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
-<meta property="og:title" content="ce-net demos"><meta property="og:description" content="Thirteen demos of things a network of ordinary devices can do together, each open source with its proof.">
+<meta name="description" content="Fourteen demos of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
+<meta property="og:title" content="ce-net demos"><meta property="og:description" content="Fourteen demos of things a network of ordinary devices can do together, each open source with its proof.">
 <meta property="og:type" content="website"><meta property="og:image" content="https://design.ce-net.com/v1/logo/ce-net-og.png">
 <meta name="theme-color" content="#070807">
 <link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
@@ -41,7 +41,7 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <button class="tog" type="button" id="tog" aria-label="Switch between dark and light">Light</button></header>
 
 <div class="crumb">ce-net / <b>Demos</b></div>
-<h1 class="display lg">Thirteen demos.</h1>
+<h1 class="display lg">Fourteen demos.</h1>
 <p class="lede">Things a network of ordinary devices can do together. Each one is its own open-source repo, built from reusable cells, with its recorded proof inside.</p>
 <div class="key">
   <div class="label"><i class="g"></i>Works <span class="t">re-run from a fresh clone, numbers reproduced</span></div>
@@ -119,6 +119,16 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <p>Turn any open-source program into a network service with one command. Then use it from your browser: same output, byte for byte.</p>
 <div class="note">Tests pass and a local run reproduces the recorded output hash. Cross-machine parity not re-checked; one dependency not public yet.</div>
 <a class="go" href="https://github.com/ce-net/demo-wrap-anything">Source and proof</a></article></li>
+</ul>
+
+<h2>Advanced · 1</h2>
+<p class="lede">Large distributed systems on the cell network: many cell instances, each with its own identity, spread over the real machines we have, and built to take more machines with no config change.</p>
+<ul class="grid">
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>Sharded search: one leader per shard, rebalanced live</h3>
+<p>4.6 million Wikipedia abstracts in 32 shards with 3 replicas each, one leader per shard. Kill a machine under a query loop that never stops: new leaders within one lease, replicas back to three, recall unchanged.</p>
+<div class="note">Recorded run: 96 instances, 7 leaders lost with machine-c, new leaders within 3.65 s, all shards back to 3 replicas in 6.57 s, 0 failed queries, recall@10 0.9202 before and after. All machines are processes on one server; the ce-net crates it was designed around are replaced by public stand-ins.</div>
+<a class="go" href="https://ce-net.github.io/demo-sharded-search/">Recorded run</a><a class="go" href="https://github.com/ce-net/demo-sharded-search">Source and proof</a></article></li>
 </ul>
 
 <footer class="foot"><span>Apache-2.0</span><a href="https://github.com/ce-net/demos">This index on GitHub</a><a href="demos.json">demos.json</a><a href="https://github.com/ce-net/starters">Starter packs</a><a href="https://ce-net.com/">ce-net.com</a></footer>
