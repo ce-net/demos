@@ -1,0 +1,99 @@
+{
+  "updated": "2026-11-15",
+  "status_meaning": {
+    "works": "Re-checked from a fresh clone: it builds, runs and reproduces the numbers in its README.",
+    "partly": "The code and recorded proof are public; the note says which part is not reproducible from outside yet."
+  },
+  "demos": [
+    {
+      "slug": "render-compute",
+      "name": "Render across devices",
+      "line": "One image, rendered by several machines at once. The result is pixel-identical to a single-machine render.",
+      "repo": "https://github.com/ce-net/demo-render-compute",
+      "page": "https://ce-net.com/demos/render-compute/",
+      "status": "works",
+      "note": "A fresh clone renders the reference and the tiled frame (one tile killed and retried) to the same hash."
+    },
+    {
+      "slug": "self-healing",
+      "name": "Kill a node, keep the data",
+      "line": "Kill the server holding the data, live. Every saved write survives, and the page proves it with a hash chain.",
+      "repo": "https://github.com/ce-net/demo-self-healing",
+      "page": "https://ce-net.com/demos/self-healing/",
+      "status": "works",
+      "note": "A fresh clone passes the local failover test: 3 leader kills, 351 acknowledged writes, every proof holds."
+    },
+    {
+      "slug": "verified-result",
+      "name": "An engineering result you can re-check",
+      "line": "A physics result that comes with a certificate. Re-check it in your own browser: same code, same inputs, same answer.",
+      "repo": "https://github.com/ce-net/demo-verified-result",
+      "page": "https://ce-net.com/demos/verified/",
+      "status": "works",
+      "note": "A fresh clone verifies all 5 certificates and rejects 440 of 440 tampered edits."
+    },
+    {
+      "slug": "inference",
+      "name": "One prompt, many devices",
+      "line": "Ask a question and see which device answers. When one device drops out, the answer keeps streaming from another.",
+      "repo": "https://github.com/ce-net/demo-inference",
+      "page": "https://ce-net.com/demos/inference/",
+      "status": "partly",
+      "note": "The recorded run is in the repo (98 tokens, 98 of 98 signatures valid, switch at token 12). The live two-device page is not public yet."
+    },
+    {
+      "slug": "follow-me",
+      "name": "Follow-me cell",
+      "line": "A service that moves to whichever machine is closest to you, and keeps answering by the same name while it moves.",
+      "repo": "https://github.com/ce-net/demo-follow-me",
+      "page": "https://ce-net.com/follow-me/",
+      "status": "partly",
+      "note": "The restart on one device is recorded. A recorded move between two devices is not in the repo yet."
+    },
+    {
+      "slug": "playground",
+      "name": "Playground: deploy a cell in your browser",
+      "line": "Write a cell in your browser, deploy it to a real network, and call it from three languages, all within a minute.",
+      "repo": "https://github.com/ce-net/demo-playground",
+      "page": null,
+      "status": "partly",
+      "note": "Code and tests for the sandbox, fuel limit and refusals are public. The hosted playground is not live yet."
+    },
+    {
+      "slug": "one-pinned-action",
+      "name": "A stranger gets exactly one action",
+      "line": "We give you a key that does exactly one thing. Try to make it do more. Every attempt is refused, and the page shows you the rule that refused it.",
+      "repo": "https://github.com/ce-net/demo-one-pinned-action",
+      "page": "https://ce-net.com/demos/one-action/",
+      "status": "partly",
+      "note": "The build needs a protocol crate that is not published yet, so the tests cannot run from outside."
+    },
+    {
+      "slug": "live-typed-data",
+      "name": "Same data, browser and terminal, live",
+      "line": "Change a value in your browser and see it change in a terminal and on a 3D factory map at the same moment. One schema, no server code.",
+      "repo": "https://github.com/ce-net/demo-live-typed-data",
+      "page": "https://ce-net.com/demos/live-data/",
+      "status": "partly",
+      "note": "Recorded logs show 23 and 18 ms end to end and the same type error in both SDKs. Not yet re-run from a fresh clone."
+    },
+    {
+      "slug": "mesh-search",
+      "name": "Search everything you are allowed to see",
+      "line": "One search box across many machines. You only get back what your key allows, and the rest never leaves the machine it lives on.",
+      "repo": "https://github.com/ce-net/demo-mesh-search",
+      "page": "https://ce-net.com/demos/search/",
+      "status": "partly",
+      "note": "The recorded report is in the repo (guest key 11 to 6 hits, engineer key 11 to 11). The build needs crates that are not published yet."
+    },
+    {
+      "slug": "wrap-anything",
+      "name": "Any program becomes a mesh service in one command",
+      "line": "Turn any open-source program into a network service with one command. Then use it from your browser: same output, byte for byte.",
+      "repo": "https://github.com/ce-net/demo-wrap-anything",
+      "page": "https://ce-net.com/demos/wrap/",
+      "status": "partly",
+      "note": "Tests pass and a local run reproduces the recorded output hash. Parity across machines is not re-checked, and one dependency is not public yet."
+    }
+  ]
+}

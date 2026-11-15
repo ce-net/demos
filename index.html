@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ce-net demos</title>
+<meta name="description" content="Ten demos of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
+<meta property="og:title" content="ce-net demos"><meta property="og:description" content="Ten demos of things a network of ordinary devices can do together, each open source with its proof.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://design.ce-net.com/v1/logo/ce-net-og.png">
+<meta name="theme-color" content="#070807">
+<link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
+<script>try{if(localStorage.getItem("ce-theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components.css">
+<style>
+.wrap{max-width:var(--max);margin:0 auto;padding:var(--s-6) var(--m) var(--s-8)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3);margin-bottom:var(--s-7)}
+.brand{font:400 13px var(--disp);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.tog{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-sm);color:var(--ink-2);font:500 10.5px var(--mono);
+  letter-spacing:.08em;text-transform:uppercase;padding:8px 10px;cursor:pointer;min-height:36px}
+.tog:hover{color:var(--ink)}
+.lede{max-width:40em;color:var(--ink-2);margin:0 0 var(--s-4)}
+.key{display:flex;flex-wrap:wrap;gap:var(--s-4);margin:0 0 var(--s-6)}
+.key .label{font-size:10px}
+.key span.t{font:400 11px var(--mono);color:var(--ink-3);text-transform:none;letter-spacing:0}
+h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-transform:uppercase;color:var(--ink-2);margin:var(--s-6) 0 var(--s-3)}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--s-2)}
+.card{padding:var(--s-4) var(--s-4) var(--s-3);display:flex;flex-direction:column;gap:var(--s-2);height:100%}
+.card h3{margin:0;font:600 var(--t-lg)/1.3 var(--sans);color:var(--ink)}
+.card p{margin:0;color:var(--ink-2);font-size:var(--t-md)}
+.card .note{font:400 11px/1.5 var(--mono);color:var(--ink-3);margin-top:auto;padding-top:var(--s-2);border-top:1px solid var(--line)}
+.card a.go{font:500 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);text-decoration:none;
+  align-self:flex-start;padding:10px 0 2px;min-height:44px;display:inline-flex;align-items:center}
+.card a.go:hover{color:var(--acc-hi)}
+
+.foot{margin-top:var(--s-7);font:400 11px var(--mono);color:var(--ink-3);display:flex;flex-wrap:wrap;gap:var(--s-4)}
+.foot a{color:var(--ink-2)}
+@media (max-width:600px){.wrap{padding:var(--s-4) 16px var(--s-7)}.grid{grid-template-columns:1fr}.top{margin-bottom:var(--s-5)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="https://ce-net.com/">ce-net</a>
+<button class="tog" type="button" id="tog" aria-label="Switch between dark and light">Light</button></header>
+
+<div class="crumb">ce-net / <b>Demos</b></div>
+<h1 class="display lg">Ten demos.</h1>
+<p class="lede">Things a network of ordinary devices can do together. Each one is its own open-source repo, built from reusable cells, with its recorded proof inside.</p>
+<div class="key">
+  <div class="label"><i class="g"></i>Works <span class="t">re-run from a fresh clone, numbers reproduced</span></div>
+  <div class="label"><i></i>Partly <span class="t">code and recorded proof public; the note says what is missing</span></div>
+</div>
+
+<h2>Works · 3</h2>
+<ul class="grid">
+<li class="feat"><article class="glass ticks card"><div class="label"><i class="g"></i>Works</div>
+<h3>Render across devices</h3>
+<p>One image, rendered by several machines at once. The result is pixel-identical to a single-machine render.</p>
+<div class="note">A fresh clone renders the reference and the tiled frame, with one tile killed and retried, to the same hash.</div>
+<a class="go" href="https://github.com/ce-net/demo-render-compute">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i class="g"></i>Works</div>
+<h3>Kill a node, keep the data</h3>
+<p>Kill the server holding the data, live. Every saved write survives, and the page proves it with a hash chain.</p>
+<div class="note">Fresh clone: 3 leader kills, 351 acknowledged writes, every proof holds.</div>
+<a class="go" href="https://github.com/ce-net/demo-self-healing">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i class="g"></i>Works</div>
+<h3>An engineering result you can re-check</h3>
+<p>A physics result that comes with a certificate. Re-check it in your own browser: same code, same inputs, same answer.</p>
+<div class="note">Fresh clone: all 5 certificates verify; 440 of 440 tampered edits rejected.</div>
+<a class="go" href="https://github.com/ce-net/demo-verified-result">Source and proof</a></article></li>
+</ul>
+
+<h2>Partly · 7</h2>
+<ul class="grid">
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>One prompt, many devices</h3>
+<p>Ask a question and see which device answers. When one device drops out, the answer keeps streaming from another.</p>
+<div class="note">Recorded run: 98 tokens, 98 of 98 signatures valid, device switch at token 12. Live two-device page not public yet.</div>
+<a class="go" href="https://github.com/ce-net/demo-inference">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>Follow-me cell</h3>
+<p>A service that moves to whichever machine is closest to you, and keeps answering by the same name while it moves.</p>
+<div class="note">The restart on one device is recorded. A move between two devices is not recorded yet.</div>
+<a class="go" href="https://github.com/ce-net/demo-follow-me">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>Playground: deploy a cell in your browser</h3>
+<p>Write a cell in your browser, deploy it to a real network, and call it from three languages, all within a minute.</p>
+<div class="note">Code and tests for the sandbox, fuel limit and refusals are public. Hosted playground not live yet.</div>
+<a class="go" href="https://github.com/ce-net/demo-playground">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>A stranger gets exactly one action</h3>
+<p>We give you a key that does exactly one thing. Try to make it do more. Every attempt is refused, and the page shows you the rule that refused it.</p>
+<div class="note">The build needs a protocol crate that is not published yet.</div>
+<a class="go" href="https://github.com/ce-net/demo-one-pinned-action">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>Same data, browser and terminal, live</h3>
+<p>Change a value in your browser and see it change in a terminal and on a 3D factory map at the same moment. One schema, no server code.</p>
+<div class="note">Recorded logs: 23 and 18 ms end to end, the same type error in Rust and TypeScript. Not yet re-run from a fresh clone.</div>
+<a class="go" href="https://github.com/ce-net/demo-live-typed-data">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>Search everything you are allowed to see</h3>
+<p>One search box across many machines. You only get back what your key allows, and the rest never leaves the machine it lives on.</p>
+<div class="note">Recorded report: guest key 11 to 6 hits, engineer key 11 to 11. The build needs crates not published yet.</div>
+<a class="go" href="https://github.com/ce-net/demo-mesh-search">Source and proof</a></article></li>
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>Any program becomes a mesh service in one command</h3>
+<p>Turn any open-source program into a network service with one command. Then use it from your browser: same output, byte for byte.</p>
+<div class="note">Tests pass and a local run reproduces the recorded output hash. Cross-machine parity not re-checked; one dependency not public yet.</div>
+<a class="go" href="https://github.com/ce-net/demo-wrap-anything">Source and proof</a></article></li>
+</ul>
+
+<footer class="foot"><span>Apache-2.0</span><a href="https://github.com/ce-net/demos">This index on GitHub</a><a href="demos.json">demos.json</a><a href="https://github.com/ce-net/starters">Starter packs</a><a href="https://ce-net.com/">ce-net.com</a></footer>
+</div>
+<script>
+(function(){var b=document.getElementById("tog"),r=document.documentElement;
+function set(){b.textContent=r.dataset.theme==="light"?"Dark":"Light"}set();
+b.addEventListener("click",function(){var l=r.dataset.theme!=="light";if(l)r.dataset.theme="light";else delete r.dataset.theme;
+try{localStorage.setItem("ce-theme",l?"light":"dark")}catch(e){}set()})})();
+</script>
+</body></html>
