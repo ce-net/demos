@@ -21,20 +21,20 @@ outside yet.
 - [Print only through the guard](https://github.com/ce-net/demo-printer-guard): Send a print job straight to the printer and it is
   refused. Send it through the guard, which checks bounds, temperatures, material and time: the 300 C job is rejected,
   the safe one prints, and a replay of the forwarded call is refused.
-- [Every call leaves a receipt](https://github.com/ce-net/demo-demo-signed-receipts): Run 200 calls across four cells, download the receipts, and check them
+- [Every call leaves a receipt](https://github.com/ce-net/demo-signed-receipts): Run 200 calls across four cells, download the receipts, and check them
   on any machine with no network. Edit one and the verifier names it; drop one and the chain shows the gap.
-- [Shared with my devices, nobody else's](https://github.com/ce-net/demo-demo-own-devices-only): Enroll your laptop, phone and desktop with a pairing code; each gets a key
+- [Shared with my devices, nobody else's](https://github.com/ce-net/demo-own-devices-only): Enroll your laptop, phone and desktop with a pairing code; each gets a key
   bound to that device. A copied key file is refused, and a lost phone is revoked from the laptop while the other two
   keep working.
-- [A factory line you can audit](https://github.com/ce-net/demo-demo-line-twin): A three-station line runs as a twin and drill becomes the bottleneck. Download the signed event log: your browser checks every signature and recomputes the numbers. Edit one timestamp and it names the event that broke.
-- [A cell that takes its data with it](https://github.com/ce-net/demo-demo-carry-state): A notes cell moves from process A
+- [A factory line you can audit](https://github.com/ce-net/demo-line-twin): A three-station line runs as a twin and drill becomes the bottleneck. Download the signed event log: your browser checks every signature and recomputes the numbers. Edit one timestamp and it names the event that broke.
+- [A cell that takes its data with it](https://github.com/ce-net/demo-carry-state): A notes cell moves from process A
   to process B while a client writes to it 20 times a second. B takes over under a higher epoch, A answers stale writes
   with "moved, epoch 2", and writes sent, acknowledged and present all match.
-- [Read it before you can act](https://github.com/ce-net/demo-demo-read-before-act): An approve key that only works after your device signs a read receipt for the exact notice. Approve first and it is refused with the clause that refused it; open the notice and the same call goes through.
-- [Edit offline, merge on reconnect](https://github.com/ce-net/demo-demo-offline-merge): A laptop and a phone share a parts list. Pull the cable, edit both sides, plug it back in: both show the same list within a second, the page shows how each conflict was resolved, and both state hashes match.
-- [A key with a spending limit](https://github.com/ce-net/demo-demo-budget-key): Give an agent a key worth 100 units and three cells that cost different amounts. A live meter drops with each call; at 3 left a 5-unit call is refused by a cell that has never seen the key, and splitting the key into two keys worth 100 each is refused.
+- [Read it before you can act](https://github.com/ce-net/demo-read-before-act): An approve key that only works after your device signs a read receipt for the exact notice. Approve first and it is refused with the clause that refused it; open the notice and the same call goes through.
+- [Edit offline, merge on reconnect](https://github.com/ce-net/demo-offline-merge): A laptop and a phone share a parts list. Pull the cable, edit both sides, plug it back in: both show the same list within a second, the page shows how each conflict was resolved, and both state hashes match.
+- [A key with a spending limit](https://github.com/ce-net/demo-budget-key): Give an agent a key worth 100 units and three cells that cost different amounts. A live meter drops with each call; at 3 left a 5-unit call is refused by a cell that has never seen the key, and splitting the key into two keys worth 100 each is refused.
 - [Work that pays only when it checks out](https://github.com/ce-net/demo-pay-on-proof): A requester posts 50 jobs and two workers take them; one is rigged to answer wrong one time in ten. A cheap verifier checks every result, only a pass gets a signed single-use reward token, and the rigged worker's acceptance rate drops live. [Page](https://ce-net.github.io/demo-pay-on-proof/).
-- [Revoke once, refused everywhere](https://github.com/ce-net/demo-demo-revoke-everywhere): Six cells accept one delegated key. Press revoke and each cell turns red as it refuses, with the milliseconds since the revoke. A cut-off cell keeps serving until its 30 s freshness bound runs out, then refuses everything.
+- [Revoke once, refused everywhere](https://github.com/ce-net/demo-revoke-everywhere): Six cells accept one delegated key. Press revoke and each cell turns red as it refuses, with the milliseconds since the revoke. A cut-off cell keeps serving until its 30 s freshness bound runs out, then refuses everything.
 
 ## Partly
 
