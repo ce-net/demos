@@ -2,8 +2,8 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ce-net live systems</title>
-<meta name="description" content="Twenty-six live systems of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
-<meta property="og:title" content="ce-net live systems"><meta property="og:description" content="Twenty-six live systems of things a network of ordinary devices can do together, each open source with its proof.">
+<meta name="description" content="Twenty-seven live systems of things a network of ordinary devices can do together. Each one is open source with its recorded proof.">
+<meta property="og:title" content="ce-net live systems"><meta property="og:description" content="Twenty-seven live systems of things a network of ordinary devices can do together, each open source with its proof.">
 <meta property="og:type" content="website"><meta property="og:image" content="https://design.ce-net.com/v1/logo/ce-net-og.png">
 <meta name="theme-color" content="#070807">
 <link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
@@ -41,15 +41,20 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <button class="tog" type="button" id="tog" aria-label="Switch between dark and light">Light</button></header>
 
 <div class="crumb">ce-net / <b>Live systems</b></div>
-<h1 class="display lg">Twenty-six live systems.</h1>
+<h1 class="display lg">Twenty-seven live systems.</h1>
 <p class="lede">Things a network of ordinary devices can do together. Each one is its own open-source repo, built from reusable cells, with its recorded proof inside.</p>
 <div class="key">
   <div class="label"><i class="g"></i>Works <span class="t">re-run from a fresh clone, numbers reproduced</span></div>
   <div class="label"><i></i>Partly <span class="t">code and recorded proof public; the note says what is missing</span></div>
 </div>
 
-<h2>Works · 17</h2>
+<h2>Works · 18</h2>
 <ul class="grid">
+<li class="feat"><article class="glass ticks card"><div class="label"><i class="g"></i>Works</div>
+<h3>A frontend made of cells</h3>
+<p>Every panel is a UI cell with its own backend, contract, node and version. The page starts empty, discovers its cells, swaps one with its state, refuses a changed byte, survives a stopped node, and empties itself when you revoke your key.</p>
+<div class="note">Four real processes, Chromium and Firefox: 12 of 12 steps each. Hot swap 73 ms with 8 of 8 other cells untouched, failover 490 ms, every logged input re-executed to the same bytes.</div>
+<a class="go" href="https://ce-net.github.io/live-frontend/">Open the live system</a><a class="go" href="https://ce-net.github.io/live-frontend/systems.html">This index as cells</a></article></li>
 <li><article class="glass card"><div class="label"><i class="g"></i>Works</div>
 <h3>A store made of cells</h3>
 <p>An online store in which the catalog, cart, inventory, order saga, test payments, gateway and page are each a cell with a typed contract. Stop the leaders mid-checkout: nothing is oversold, and no order is lost or made twice.</p>

@@ -1,10 +1,19 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "status_meaning": {
     "works": "Re-checked from a fresh clone: it builds, runs and reproduces the numbers in its README.",
     "partly": "The code and recorded proof are public; the note says which part is not reproducible from outside yet."
   },
   "demos": [
+    {
+      "slug": "live-frontend",
+      "name": "A frontend made of cells",
+      "line": "Every panel is a UI cell with its own backend, contract, node and version. The page starts empty, discovers its cells, swaps one with its state, refuses a changed byte, survives a stopped node, and empties itself when you revoke your key.",
+      "repo": "https://github.com/ce-net/live-frontend",
+      "page": "https://ce-net.github.io/live-frontend/",
+      "status": "works",
+      "note": "Recorded on four real processes in Chromium and Firefox: 12 of 12 steps each, hot swap 73 ms with 8 of 8 other cells untouched, failover 490 ms, every logged input re-executed to the same bytes. The index of live systems as cells: ce-net.github.io/live-frontend/systems.html."
+    },
     {
       "slug": "live-shop",
       "name": "A store made of cells",
