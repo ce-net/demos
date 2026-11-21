@@ -273,7 +273,7 @@
       "repo": "https://github.com/ce-net/live-subs",
       "page": "https://ce-net.github.io/live-subs/",
       "status": "partly",
-      "note": "Recorded on a live system: pick in 7 ms, a run without the grant refused, a granted run in a CPU-capped sandbox in 259 ms, a forced limit, and the move to the other account with the reason. One account was sim, the run was a stand-in task, and the owner key was a demo key."
+      "note": "Run 2 on a live system: the subs cell on 3 replicas over two account cells, each CPU-capped and stopped after. A caller without the usage right sees bands only, a submit without a tap gets NeedsGrant, the one-use grant runs the task on the account with the most headroom and stores why, a forced limit moves the next task with both reasons, Off makes zero window starts and Queued one. Accounts were sim and a test key signed the grants."
     },
     {
       "slug": "live-wrap",
