@@ -12,6 +12,7 @@ outside yet.
 
 ## Works
 
+- [A workspace made of cells](https://github.com/ce-net/live-devenv): A development workspace shared by people and agents on three nodes. Files, builds, tests, tools, reviews and receipts are cells with typed contracts. There is no shell: every edit and run is checked against the caller's capability chain, runs in a box, and leaves a signed, hash-linked receipt.
 - [A store made of cells](https://github.com/ce-net/live-shop): An online store in which the catalog, cart, inventory,
   order saga, test payments, gateway and page are each a cell with a typed contract. Stop the leaders mid-checkout:
   nothing is oversold, and no order is lost or made twice.

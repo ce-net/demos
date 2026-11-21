@@ -24,6 +24,15 @@
       "note": "CI builds a fresh clone and reruns the proofs. Recorded: 20 of 20 seeded runs pass A1-A6 (4000 orders, 971 confirmed, none oversold, none doubled). A renamed field breaks both the page and the Rust build. Payments run in test mode only."
     },
     {
+      "slug": "live-devenv",
+      "name": "A workspace made of cells",
+      "line": "A development workspace shared by people and agents on three nodes. Files, builds, tests, tools, reviews and receipts are cells with typed contracts. There is no shell: every edit and run is checked against the caller's capability chain, runs in a box, and leaves a signed, hash-linked receipt.",
+      "repo": "https://github.com/ce-net/live-devenv",
+      "page": "https://ce-net.github.io/live-devenv/",
+      "status": "works",
+      "note": "Recorded on three real nodes: 14 of 14 steps hold, 70 receipts in 3 node chains (8 refusals), every link and signature verifies. Builds and tests run on the worker at ns+landlock+seccomp; a repeated build is a cache hit with no box started; a revoked agent is refused on every node after one round. CI reruns the 14 steps on every push."
+    },
+    {
       "slug": "live-refs",
       "name": "References: anything to anything",
       "line": "One kind of name reaches a file on a laptop, a blob, a repo file at a commit, a node, a person, a cell op, a capability and an enterprise system. It follows moves and refuses changed bytes.",
