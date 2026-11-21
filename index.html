@@ -48,13 +48,18 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
   <div class="label"><i></i>Partly <span class="t">code and recorded proof public; the note says what is missing</span></div>
 </div>
 
-<h2>Works · 19</h2>
+<h2>Works · 20</h2>
 <ul class="grid">
 <li class="feat"><article class="glass ticks card"><div class="label"><i class="g"></i>Works</div>
 <h3>A frontend made of cells</h3>
 <p>Every panel is a UI cell with its own backend, contract, node and version. The page starts empty, discovers its cells, swaps one with its state, refuses a changed byte, survives a stopped node, and empties itself when you revoke your key.</p>
 <div class="note">Four real processes, recorded by CI in Chromium and Firefox: 16 of 16 steps each. Hot swap 36 ms with 8 of 8 other cells untouched, failover 238 ms (Firefox 490 ms), every logged input re-executed to the same bytes.</div>
 <a class="go" href="https://ce-net.github.io/live-frontend/">Open the live system</a><a class="go" href="https://ce-net.github.io/live-frontend/systems.html">This index as cells</a></article></li>
+<li><article class="glass card"><div class="label"><i class="g"></i>Works</div>
+<h3>Cells inside cells</h3>
+<p>A holder cell runs a box with its own door and cells, and one of those cells runs a second box. Every boundary adds one capability link with fewer rights, less depth, an earlier expiry and a scope one box deeper, and every inner door checks the whole chain.</p>
+<div class="note">Recorded on foreman-ops-1, called from a second machine: AddNote went through two bubblewrap boxes in 11 ms with chains of 4, 4 and 6 links. Four refusals held: an inner cell called from outside, a call past the uplink, a wider right, and the inner box reaching the network. Idle: 7 processes, 0.00% CPU, 0 wake-ups/s. CI runs the whole tree in real boxes on x86_64 and arm64.</div>
+<a class="go" href="https://ce-net.github.io/live-nested/">Open the live system</a></article></li>
 <li><article class="glass card"><div class="label"><i class="g"></i>Works</div>
 <h3>A workspace made of cells</h3>
 <p>A development workspace shared by people and agents on three nodes. Files, builds, tests, tools, reviews and receipts are cells with typed contracts. There is no shell: every edit and run is checked against the caller's capability chain, runs in a box, and leaves a signed, hash-linked receipt.</p>
