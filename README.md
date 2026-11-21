@@ -1,6 +1,6 @@
 # ce-net live systems
 
-Twenty-six live systems of things a network of ordinary devices can do together: render one frame on several machines, survive a
+Thirty-two live systems of things a network of ordinary devices can do together: render one frame on several machines, survive a
 killed server without losing a write, hand a stranger a key that does exactly one thing, and more. Each one is its own
 repo, Apache-2.0, built from reusable ce-net cells, with its recorded proof in the repo.
 

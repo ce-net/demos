@@ -21,7 +21,7 @@
       "repo": "https://github.com/ce-net/live-nested",
       "page": "https://ce-net.github.io/live-nested/",
       "status": "works",
-      "note": "Recorded on foreman-ops-1, called from a second machine: AddNote went through two bubblewrap boxes in 11 ms with chains of 4, 4 and 6 links. Four refusals held: an inner cell called from outside, a call past the uplink, a wider right, and the inner box reaching the network. Idle: 7 processes, 0.00% CPU, 0 wake-ups/s. CI runs the whole tree in real boxes on x86_64 and arm64."
+      "note": "Recorded on an aarch64 node, called from a second machine: AddNote went through two bubblewrap boxes in 11 ms with chains of 4, 4 and 6 links. Four refusals held: an inner cell called from outside, a call past the uplink, a wider right, and the inner box reaching the network. Idle: 7 processes, 0.00% CPU, 0 wake-ups/s. CI runs the whole tree in real boxes on x86_64 and arm64."
     },
     {
       "slug": "live-shop",
