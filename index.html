@@ -142,8 +142,23 @@ h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-tran
 <a class="go" href="https://ce-net.github.io/live-search/">Open the page</a> <a class="go" href="https://github.com/ce-net/live-search">Source and proof</a></article></li>
 </ul>
 
-<h2>Partly · 9</h2>
+<h2>Partly · 12</h2>
 <ul class="grid">
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>Several subscriptions, one cell per device</h3>
+<p>One account cell per device owns that device&#x27;s login. The gateway picks an account for each task by weekly headroom and stores why; it moves tasks, never credentials or model traffic. Every run needs the owner&#x27;s one-use grant for that exact task.</p>
+<div class="note">Recorded on a live system: pick in 7 ms, a run without the grant refused, a granted run in a CPU-capped sandbox in 259 ms, a forced limit, and the move to the other account with the reason. One account was sim, the run was a stand-in task, and the owner key was a demo key.</div>
+<a class="go" href="https://ce-net.github.io/live-subs/">Open the live system</a></article></li>
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>Any self-hosted app behind a passkey</h3>
+<p>One catalog entry per app: the upstream image pinned by digest, CPU and memory caps, a gate that denies by default and sets the user header the app trusts, and sealed snapshots that refuse to restore when tampered.</p>
+<div class="note">Gitea and grafana ran live: no session or a spoofed header got 401, a session got in with no second password, git push went through the gate, and a snapshot was taken, removed, refused when tampered and restored with the commit intact. The sessions came from a demo issuer key, not a passkey login.</div>
+<a class="go" href="https://ce-net.github.io/live-wrap/">Open the live system</a></article></li>
+<li><article class="glass card"><div class="label"><i></i>Partly</div>
+<h3>An ops cell that asks before it acts</h3>
+<p>Seven lines: a fleet snapshot, an AI proposal, and apply only with the owner&#x27;s one-use grant bound to the hash of that exact change. Plan, grant and result are three linked audit rows.</p>
+<div class="note">Recorded on a live system with three capped replicas: &quot;which cell is unhealthy?&quot; proposed restarting the stopped demo cell in 3.9 s, apply without a grant was refused, and with the grant the restart took 96 ms. The owner key was a demo key, so the passkey tap is not part of the proof.</div>
+<a class="go" href="https://github.com/ce-net/seven-lines#a-second-cell-ops-2026-11-21">Read the recorded run</a></article></li>
 <li><article class="glass card"><div class="label"><i></i>Partly</div>
 <h3>Fundamentals, live</h3>
 <p>Ten fundamental cells walked through on a four-node mesh: a typed contract, by_name over four routes, ce-gate grants, a cap v3 chain that only works through a broker, state.store, a leader killed mid-write, search, orch, a pinned build and an ordinary binary wrapped as a cell.</p>

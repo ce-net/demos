@@ -1,0 +1,31 @@
+{
+ "format": "ce-ui-holders@1",
+ "note": "The places the index of live systems asks for a ce-ui.json card entry (repo:live-frontend/docs/DESIGN.md section 6). Generated from demos.json; the list of places is fixed on a static host, the cards are not.",
+ "origins": [
+  "https://ce-net.github.io/live-frontend/",
+  "https://ce-net.github.io/live-shop/",
+  "https://ce-net.github.io/live-refs/",
+  "https://ce-net.com/demos/render-compute/",
+  "https://ce-net.com/demos/self-healing/",
+  "https://ce-net.com/demos/verified/",
+  "https://ce-net.com/demos/inference/",
+  "https://ce-net.com/follow-me/",
+  "https://ce-net.com/demos/one-action/",
+  "https://ce-net.com/demos/live-data/",
+  "https://ce-net.com/demos/search/",
+  "https://ce-net.com/demos/wrap/",
+  "https://github.com/ce-net/demo-printer-guard",
+  "https://github.com/ce-net/demo-signed-receipts",
+  "https://github.com/ce-net/demo-own-devices-only",
+  "https://ce-net.github.io/demo-sharded-search/",
+  "https://ce-net.github.io/demo-line-twin/",
+  "https://ce-net.github.io/demo-read-before-act/",
+  "https://ce-net.github.io/demo-offline-merge/",
+  "https://ce-net.github.io/demo-budget-key/",
+  "https://ce-net.github.io/demo-pay-on-proof/",
+  "https://ce-net.github.io/demo-revoke-everywhere/",
+  "https://ce-net.github.io/live-database/",
+  "https://ce-net.github.io/live-fundamentals/",
+  "https://ce-net.github.io/live-search/"
+ ]
+}

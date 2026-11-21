@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-21",
   "status_meaning": {
     "works": "Re-checked from a fresh clone: it builds, runs and reproduces the numbers in its README.",
     "partly": "The code and recorded proof are public; the note says which part is not reproducible from outside yet."
@@ -247,6 +247,33 @@
       "page": "https://ce-net.github.io/live-search/",
       "status": "works",
       "note": "Fresh clone (CI): the whole loop on four node processes, 22 signed steps; count-1 grant 1 allowed and 1 refused; worker signature valid; capability search recall@1 16/20 to 20/20, held-out 8/10 (at 5: 8 to 9). The advisor's answers were asked live and are replayed from the recorded transcript; the two work cells are stand-ins with the real contracts."
+    },
+    {
+      "slug": "live-subs",
+      "name": "Several subscriptions, one cell per device",
+      "line": "One account cell per device owns that device's login. The gateway picks an account for each task by weekly headroom and stores why; it moves tasks, never credentials or model traffic. Every run needs the owner's one-use grant for that exact task.",
+      "repo": "https://github.com/ce-net/live-subs",
+      "page": "https://ce-net.github.io/live-subs/",
+      "status": "partly",
+      "note": "Recorded on a live system: pick in 7 ms, a run without the grant refused, a granted run in a CPU-capped sandbox in 259 ms, a forced limit, and the move to the other account with the reason. One account was sim, the run was a stand-in task, and the owner key was a demo key."
+    },
+    {
+      "slug": "live-wrap",
+      "name": "Any self-hosted app behind a passkey",
+      "line": "One catalog entry per app: the upstream image pinned by digest, CPU and memory caps, a gate that denies by default and sets the user header the app trusts, and sealed snapshots that refuse to restore when tampered.",
+      "repo": "https://github.com/ce-net/live-wrap",
+      "page": "https://ce-net.github.io/live-wrap/",
+      "status": "partly",
+      "note": "Gitea and grafana ran live: no session or a spoofed header got 401, a session got in with no second password, git push went through the gate, and a snapshot was taken, removed, refused when tampered and restored with the commit intact. The sessions came from a demo issuer key, not a passkey login."
+    },
+    {
+      "slug": "ops-cell",
+      "name": "An ops cell that asks before it acts",
+      "line": "Seven lines: a fleet snapshot, an AI proposal, and apply only with the owner's one-use grant bound to the hash of that exact change. Plan, grant and result are three linked audit rows.",
+      "repo": "https://github.com/ce-net/seven-lines",
+      "page": "https://github.com/ce-net/seven-lines#a-second-cell-ops-2026-11-21",
+      "status": "partly",
+      "note": "Recorded on a live system with three capped replicas: \"which cell is unhealthy?\" proposed restarting the stopped demo cell in 3.9 s, apply without a grant was refused, and with the grant the restart took 96 ms. The owner key was a demo key, so the passkey tap is not part of the proof."
     }
   ]
 }
