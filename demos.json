@@ -12,7 +12,7 @@
       "repo": "https://github.com/ce-net/live-frontend",
       "page": "https://ce-net.github.io/live-frontend/",
       "status": "works",
-      "note": "Recorded on four real processes in Chromium and Firefox: 12 of 12 steps each, hot swap 73 ms with 8 of 8 other cells untouched, failover 490 ms, every logged input re-executed to the same bytes. The index of live systems as cells: ce-net.github.io/live-frontend/systems.html."
+      "note": "Recorded by CI on four real processes in Chromium and Firefox: 16 of 16 steps each, hot swap 36 ms with 8 of 8 other cells untouched, failover 238 ms (Firefox 490 ms), every logged input re-executed to the same bytes. Every view is a render capability of its own cell; one http.serve cell is the only HTTP listener."
     },
     {
       "slug": "live-shop",
